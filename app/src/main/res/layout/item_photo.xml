@@ -1,0 +1,52 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="photo"
+            type="com.example.typicode.PhotoList" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/photoImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:contentDescription="@string/photo_image"
+                android:background="@color/black"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/photoTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:text="@{photo.title}"
+                android:textSize="18sp"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/view_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:text="Details >"
+                android:textColor="#000"
+                android:paddingEnd="20dp"
+                android:gravity="end|center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
+
+
